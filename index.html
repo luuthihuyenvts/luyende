@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kho luyện đề Tin học THPT 2026</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="hero">
+    <div class="wrap heroGrid">
+      <div>
+        <div class="badge">💻 Ôn thi tốt nghiệp THPT môn Tin học</div>
+        <h1>Kho luyện đề thi các tỉnh năm 2026</h1>
+        <p class="lead">Tổng hợp các đề thi thử Tin học từ nhiều tỉnh/thành. Danh sách đề hiển thị rõ ngay bên dưới, học sinh nhấn vào từng đề để xem trực tiếp trên web.</p>
+        <div class="actions">
+          <a class="btn primary" href="#practice">Bắt đầu luyện đề</a>
+          <button class="btn outline" id="randomBtn" type="button">Chọn ngẫu nhiên một đề</button>
+        </div>
+      </div>
+      <div class="heroCard">
+        <div class="stat"><b id="count">0</b><span>đề/tệp</span></div>
+        <div class="stat"><b id="provCount">0</b><span>tỉnh/thành</span></div>
+        <div class="stat"><b>PDF</b><span>xem trực tiếp</span></div>
+      </div>
+    </div>
+  </header>
+
+  <main class="wrap main">
+    <section class="panel intro">
+      <h2>🎯 Mục tiêu luyện đề</h2>
+      <p>Website được hoàn thiện theo yêu cầu: thay đúng bộ đề mới, giữ chức năng xem đề trực tiếp và tối ưu giao diện để nhúng vào Google Sites.</p>
+      <div class="chips">
+        <span>24 câu trắc nghiệm</span>
+        <span>Đúng/Sai</span>
+        <span>HTML - CSS</span>
+        <span>Mạng máy tính</span>
+        <span>AI</span>
+        <span>Python/C++</span>
+        <span>CSDL</span>
+      </div>
+    </section>
+
+    <section class="panel examPanel">
+      <div class="sideTitle"><h2>📌 Chọn đề để xem trực tiếp</h2><span>Nhấn vào tên đề</span></div>
+      <div id="cards" class="cards"></div>
+    </section>
+
+    <section id="practice" class="panel toolsPanel">
+      <div class="tools">
+        <input id="q" type="search" placeholder="Tìm đề: Hà Nội, Nghệ An, Phú Thọ, Đắk Lắk...">
+        <select id="province"><option value="">Tất cả tỉnh/thành</option></select>
+        <select id="mode">
+          <option value="direct">Xem PDF trực tiếp</option>
+          <option value="gview">Xem bằng Google Viewer</option>
+        </select>
+      </div>
+    </section>
+
+    <section class="content">
+      <aside class="panel side">
+        <div class="sideTitle">
+          <h2>📚 Danh sách đề</h2>
+          <span id="resultCount"></span>
+        </div>
+        <div id="list" class="list"></div>
+      </aside>
+
+      <section class="panel viewer">
+        <div class="viewerTop">
+          <div>
+            <h2 id="viewTitle">Chọn một đề để xem</h2>
+            <p id="viewMeta">Đề sẽ hiển thị trong khung xem bên dưới.</p>
+          </div>
+          <div class="smallBtns">
+            <a id="download" href="#" download>⬇ Tải xuống</a>
+            <a id="openNew" href="#" target="_blank" rel="noopener">↗ Mở toàn màn hình</a>
+          </div>
+        </div>
+        <div id="viewerBox"><div class="empty">Chọn một đề trong danh sách bên trái để bắt đầu luyện tập.</div></div>
+      </section>
+    </section>
+  </main>
+
+  <footer class="footer">Kho luyện đề Tin học THPT 2026 · Giao diện tối ưu để nhúng Google Sites</footer>
+  <script src="app.js"></script>
+</body>
+</html>
